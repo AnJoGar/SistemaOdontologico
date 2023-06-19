@@ -10,10 +10,7 @@ namespace SistemaOdontologico.Models
 {
   public class Cita
   {
-    public Cita()
-    {
-      DetalleCita = new HashSet<DetalleCita>();
-    }
+  
     [Key]
     public int Id { get; set; }
     public String? NumeroDocumento { get; set; }

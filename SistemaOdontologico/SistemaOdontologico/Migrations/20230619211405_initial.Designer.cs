@@ -12,8 +12,8 @@ using SistemaOdontologico.Models;
 namespace SistemaOdontologico.Migrations
 {
     [DbContext(typeof(SistemaOdontologicoDbContext))]
-    [Migration("20230619205434_Initial")]
-    partial class Initial
+    [Migration("20230619211405_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -48,11 +48,11 @@ namespace SistemaOdontologico.Migrations
 
             modelBuilder.Entity("SistemaOdontologico.Models.DetalleCita", b =>
                 {
-                    b.Property<int>("IdDetalleVenta")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdDetalleVenta"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int?>("CitaId")
                         .HasColumnType("int");
@@ -75,7 +75,7 @@ namespace SistemaOdontologico.Migrations
                     b.Property<decimal?>("Total")
                         .HasColumnType("decimal(18,2)");
 
-                    b.HasKey("IdDetalleVenta");
+                    b.HasKey("Id");
 
                     b.HasIndex("CitaId");
 

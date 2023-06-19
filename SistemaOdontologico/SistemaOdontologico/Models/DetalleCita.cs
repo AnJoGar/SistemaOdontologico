@@ -10,7 +10,7 @@ namespace SistemaOdontologico.Models
   {
 
     [Key]
-    public int IdDetalleVenta { get; set; }
+    public int Id { get; set; }
     public int? CitaId { get; set; }
     public int? PacienteId { get; set; }
 

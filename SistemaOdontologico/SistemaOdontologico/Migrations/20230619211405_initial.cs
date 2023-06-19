@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SistemaOdontologico.Migrations
 {
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -155,7 +155,7 @@ namespace SistemaOdontologico.Migrations
                 name: "DetalleCita",
                 columns: table => new
                 {
-                    IdDetalleVenta = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CitaId = table.Column<int>(type: "int", nullable: true),
                     PacienteId = table.Column<int>(type: "int", nullable: true),
@@ -167,7 +167,7 @@ namespace SistemaOdontologico.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DetalleCita", x => x.IdDetalleVenta);
+                    table.PrimaryKey("PK_DetalleCita", x => x.Id);
                     table.ForeignKey(
                         name: "FK_DetalleCita_Citas_CitaId",
                         column: x => x.CitaId,
